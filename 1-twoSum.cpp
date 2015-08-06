@@ -49,3 +49,32 @@ int main(){
 	}
 	return 0;
 }
+
+/* yangtengfei
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        vector<int> res;// result vector (I return it when I find the answer).
+        map<int, int> ma; // map, one kind of STL container , first parameter means key, second means value.
+                            // there is no two same keys in one map
+                            // i use it to record weather the key has been occurred in the vector "nums".
+        ma[nums[0]] = 1;
+        // first, the element index 0 in vector nums should be marked 1
+        // because when you visit ma[x], if there is no key called x, you will get 0
+        // so I mark it as 1 to differ with none of this element
+        for (int i = 1; i < (int)nums.size(); ++ i) {
+            // for every element in nums
+            // check if the ( target - nums[i] ) has been occurred
+            // if it is , add it to res, and return , end.
+            if (ma[target-nums[i]] != 0) {
+                res.push_back(ma[target-nums[i]]);//我只找了一遍，对每个元素，我检查map里面的时候，都是看前面有没有出现过这个元素
+                res.push_back(i+1);
+                return res;
+            }
+            else {
+                ma[nums[i]] = i+1;
+            }
+        }
+    }
+};
+*/
