@@ -16,19 +16,17 @@ class Solution:
     def twoSum(self, nums, target):
     	result=[]
     	maps = {}
-    	i = 0
-    	for value in nums:
-    		maps[value] = i
-    		i = i + 1
-    	for key in maps:
-    	 	rest_val = target - key
-    	 	if nums.__contains__(rest_val):
-    	 		if maps[key] != maps[rest_val]:
-	    	 		result.append(maps[key] + 1)
-	    	 		result.append(maps[rest_val] + 1)
-	    			return result
-	    		else:
-	    			if nums.count()
+    	maps[nums[0]] = 1;
+    	i = 1
+    	while (i < len(nums)):
+    		if ( (target-nums[i]) in maps):
+    			result.append(maps[target-nums[i]])
+    			result.append(i+1)
+    			return result
+    		else:
+    			maps[nums[i]] = i+1
+    		i = i+1
+
 nums = [0, 7 ,11, 0]
 target = 0 
 s1 = Solution()

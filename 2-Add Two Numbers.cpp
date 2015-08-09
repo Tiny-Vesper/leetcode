@@ -36,5 +36,16 @@ public:
 
 int main(){
 	Solution s1;
-	cout<<s1.addTwoNumbers()
+	ListNode head1(2),head2(5);
+	head1.next = new ListNode(4);
+	head2.next = new ListNode(6);
+	head1.next->next = new ListNode(3);
+	head2.next->next = new ListNode(4);
+	ListNode* p1 = &head1;
+	ListNode* p2 = &head2;
+	ListNode* res = s1.addTwoNumbers(p1, p2);
+	while(res) {
+		cout << res->val <<endl;
+		res = res->next;
+	}
 }
