@@ -1,0 +1,56 @@
+[
+	//编译运行
+	{ "keys": ["f7"], "command": "build" },
+	{ "keys": ["f9"], "command": "build", "args": {"variant": "Run"} },
+	{ "keys": ["f10"], "command": "exec", "args": {"kill": true} },
+	//关闭控制台
+	{ "keys": ["f1"], "command": "toggle_side_bar" },
+	{ "keys": ["f11"], "command": "toggle_full_screen" },
+	{ "keys": ["shift+f11"], "command": "toggle_distraction_free" },
+
+	//窗口
+	{ "keys": ["ctrl+w"], "command": "close" },
+	{ "keys": ["ctrl+shift+t"], "command": "reopen_last_file" },
+	{ "keys": ["ctrl+tab"], "command": "next_view_in_stack" },
+	{ "keys": ["ctrl+shift+tab"], "command": "prev_view_in_stack" },
+	//鼠标选中多行，按下 Ctrl Shift L (Command Shift L) 即可同时编辑这些行；
+	//鼠标选中文本，反复按 CTRL D (Command D) 即可继续向下同时选中下一个相同的文本进行同时编辑,跳过ctrl+K；
+	//鼠标选中文本，按下 Alt F3 (Win) 或 Ctrl Command G(Mac) 即可一次性选择全部的相同文本进行同时编辑；
+	//Shift 鼠标右键 (Win) 或 Option 鼠标左键 (Mac) 或使用鼠标中键可以用鼠标进行竖向多行选择；
+	//Ctrl 鼠标左键(Win) 或 Command 鼠标左键(Mac) 可以手动选择同时要编辑的多处文本 
+
+	//关闭编译台
+	{ "keys": ["escape"], "command": "hide_popup", "context":
+		[
+			{ "key": "popup_visible", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["escape"], "command": "hide_auto_complete", "context":
+		[
+			{ "key": "auto_complete_visible", "operator": "equal", "operand": true }
+		]
+	},
+//快速开新一行
+	{ "keys": ["ctrl+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"} },
+	{ "keys": ["ctrl+shift+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"} },
+//多文件编辑
+	{ "keys": ["ctrl+1"], "command": "focus_group", "args": { "group": 0 } },
+	{ "keys": ["ctrl+2"], "command": "focus_group", "args": { "group": 1 } },
+	{ "keys": ["ctrl+3"], "command": "focus_group", "args": { "group": 2 } },
+	{ "keys": ["ctrl+4"], "command": "focus_group", "args": { "group": 3 } },
+	{ "keys": ["ctrl+5"], "command": "focus_group", "args": { "group": 4 } },
+	{ "keys": ["ctrl+6"], "command": "focus_group", "args": { "group": 5 } },
+	{ "keys": ["ctrl+7"], "command": "focus_group", "args": { "group": 6 } },
+	{ "keys": ["ctrl+8"], "command": "focus_group", "args": { "group": 7 } },
+	{ "keys": ["ctrl+9"], "command": "focus_group", "args": { "group": 8 } },
+	{ "keys": ["ctrl+shift+1"], "command": "move_to_group", "args": { "group": 0 } },
+	{ "keys": ["ctrl+shift+2"], "command": "move_to_group", "args": { "group": 1 } },
+	{ "keys": ["ctrl+shift+3"], "command": "move_to_group", "args": { "group": 2 } },
+	{ "keys": ["ctrl+shift+4"], "command": "move_to_group", "args": { "group": 3 } },
+	{ "keys": ["ctrl+shift+5"], "command": "move_to_group", "args": { "group": 4 } },
+	{ "keys": ["ctrl+shift+6"], "command": "move_to_group", "args": { "group": 5 } },
+	{ "keys": ["ctrl+shift+7"], "command": "move_to_group", "args": { "group": 6 } },
+	{ "keys": ["ctrl+shift+8"], "command": "move_to_group", "args": { "group": 7 } },
+	{ "keys": ["ctrl+shift+9"], "command": "move_to_group", "args": { "group": 8 } },
+	{ "keys": ["ctrl+0"], "command": "focus_side_bar" },
+]
